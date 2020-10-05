@@ -6,22 +6,20 @@ namespace App\FormValidator\ValidationRules;
 
 use App\FormInterface;
 
-class PasswordValidationRule implements ValidationRuleInterface
+class PasswordLenghtRule extends ValidationRuleClass
 {
-    private FormInterface $form;
+    const ERROR = "Пароль должен быть не менее 8 символов";
 
-    public function __construct(FormInterface $form)
+    public static function checkParameters(FormInterface $form): bool
     {
-        $this->form = $form;
+        if (strlen($form->getPassword()) < 8) {
+            return false;
+        }
+        return true;
     }
 
-    public function checkParameters(): bool
+    public static function getError(): string
     {
-
-    }
-
-    public function getLastError(): string
-    {
-        // TODO: Implement getLastError() method.
+        return self::ERROR;
     }
 }

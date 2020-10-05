@@ -1,10 +1,12 @@
 <?php
 
 
-namespace App\Validator;
+namespace App\FormValidator;
 
 
-class FormValidatorInterface
+interface FormValidatorInterface
 {
+    public function validate(): bool;
 
+    public function getError(): ?string;
 }

@@ -12,5 +12,7 @@ interface FormInterface
 
     public function getPassword(): string;
 
-    public function getConfirmation(): string;
+    public function getPasswordConfirmation(): string;
+
+    public function getAllFields(): array;
 }

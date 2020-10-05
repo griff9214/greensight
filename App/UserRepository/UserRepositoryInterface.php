@@ -4,7 +4,7 @@
 namespace App\UserRepository;
 
 
-class UserRepositoryInterface
+interface UserRepositoryInterface
 {
-
+    public function findByName(string $name): ?array;
 }
