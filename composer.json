@@ -1,0 +1,20 @@
+{
+  "name": "user/greensight",
+  "description": "test task for greensight",
+  "authors": [
+    {
+      "name": "griff9214",
+      "email": "griff@list.ru"
+    }
+  ],
+  "require": {
+
+  },
+    "autoload" : {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    }
+}
+
+
